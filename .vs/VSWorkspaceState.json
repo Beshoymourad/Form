@@ -4,14 +4,14 @@
     "\\app",
     "\\app\\Http",
     "\\app\\Http\\Controllers",
+    "\\app\\Models",
     "\\public",
     "\\public\\css",
     "\\resources",
     "\\resources\\views",
     "\\resources\\views\\Layouts",
-    "\\routes",
-    "\\storage\\app\\public"
+    "\\routes"
   ],
-  "SelectedNode": "\\resources\\views\\layout.blade.php",
+  "SelectedNode": "\\routes\\web.php",
   "PreviewInSolutionExplorer": false
 }

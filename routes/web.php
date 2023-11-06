@@ -19,14 +19,26 @@ Route::get('/', function () {
 });
 
 
-// Display the form
+
 Route::get('/form', [App\Http\Controllers\FormController::class, 'showForm'])->name('form');
 
-// Process the form submission
+
 Route::post('/form', [FormController::class, 'processForm'])->name('form.submit');
 
 
 Route::post('/form-submit', [FormController::class, 'submit'])->name('form.submit');
+
+Route::post('/store', [FormController::class, 'processForm'])->name('form.store');
+
+
+Route::get('submissions', [FormController::class, 'getFormData'])->name('submissions');
+
+
+Route::get('/form', [FormController::class, 'showForm'])->name('form');
+
+Route::post('/form', [FormController::class, 'processForm'])->name('form.submit');
+
+Route::delete('/{id}', [FormController::class, 'deleteForm'])->name('form.delete');
 
 Route::get('/test-form', function () {
     return view('test-form');

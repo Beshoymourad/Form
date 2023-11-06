@@ -7,7 +7,7 @@
             <div class="card">
 
                 <div class="card-body">
-                    <form method="POST" action="{{ route('form.submit') }}">
+                    <form method="POST" action="{{ route('form.store') }}">
                         @csrf
 
                         <div class="background">
@@ -36,26 +36,26 @@
                                         <div class="screen-body-item">
                                             <div class="app-form">
                                                 <div class="app-form-group">
-                                                    <input class="app-form-control" placeholder="NAME" name="name" value="{{ old('name') }}" required />
-                                                    @error('name')
+                                                    <input class="app-form-control" placeholder="NAME" name="NAME" value="{{ old('NAME') }}" required />
+                                                    @error('NAME')
                                                     <div class="alert alert-danger">{{ $message }}</div>
                                                     @enderror
                                                 </div>
                                                 <div class="app-form-group">
-                                                    <input class="app-form-control" placeholder="EMAIL" name="email" value="{{ old('email') }}" required />
-                                                    @error('email')
+                                                    <input class="app-form-control" placeholder="EMAIL" name="EMAIL" value="{{ old('EMAIL') }}" required />
+                                                    @error('EMAIL')
                                                     <div class="alert alert-danger">{{ $message }}</div>
                                                     @enderror
                                                 </div>
                                                 <div class="app-form-group">
-                                                    <input class="app-form-control" placeholder="CONTACT NO" name="phone" value="{{ old('phone') }}" required />
-                                                    @error('phone')
+                                                    <input class="app-form-control" placeholder="CONTACT_NO" name="CONTACT_NO" value="{{ old('CONTACT_NO') }}" required />
+                                                    @error('CONTACT_NO')
                                                     <div class="alert alert-danger">{{ $message }}</div>
                                                     @enderror
                                                 </div>
-                                                <div class="app-form-group message">
-                                                    <input class="app-form-control" placeholder="MESSAGE" name="message" value="{{ old('message') }}" required />
-                                                    @error('message')
+                                                <div class="app-form-group">
+                                                    <input class="app-form-control" placeholder="MESSAGE" name="MESSAGE" value="{{ old('MESSAGE') }}" required />
+                                                    @error('MESSAGE')
                                                     <div class="alert alert-danger">{{ $message }}</div>
                                                     @enderror
                                                 </div>
@@ -69,10 +69,10 @@
                                 </div>
                             </div>
                         </div>
-
-
-
                     </form>
+
+
+
                 </div>
             </div>
         </div>
